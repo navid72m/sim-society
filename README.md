@@ -1,101 +1,99 @@
-# 🧠 Simulating Society: AI, Justice, and Feedback
+# 🧠 Simulating Society with Deliberative AI
 
-**What does it mean to govern fairly?** What if society could debate policies, express dissatisfaction, and evolve its own values — not through elections, but through learning?
-
-This project explores these questions by simulating a society using AI agents and adaptive policy feedback loops. It combines philosophical curiosity with machine learning tools to create a living system that negotiates fairness, meritocracy, and inclusion.
+This repository contains a research prototype exploring **deliberative AI** for **policy evaluation** using simulated societies of language model agents. We aim to model fairness, disagreement, and value alignment through agent-based reasoning and dynamic policy adaptation.
 
 ---
 
-## 🌍 Project Vision
+## 📜 Overview
+Inspired by political philosophy (Habermas, Rawls) and modern interpretability methods, we build a system where agents with diverse values:
 
-We live in a world of difficult trade-offs:
-- Should we prioritize **productivity** or **equity**?
-- Is **meritocracy** fair when starting conditions differ?
-- Can we design systems that respond to social feedback?
+- Deliberate over social policy
+- Provide critiques and justifications
+- Influence policy evolution via feedback
 
-This repository explores how **AI agents** representing social groups — with different levels of privilege, education, and economic capital — can be used to evaluate and shape policy.
-
-The goal isn’t to find the perfect policy, but to:
-- Understand the **tensions between competing values**
-- Simulate **social dynamics and collective decision-making**
-- Experiment with **feedback-driven governance**
+The system compares **multi-agent policy generation** with **single-LLM generation**, measuring alignment, fairness, and reasoning quality.
 
 ---
 
-## 🧪 Repository Structure
+## 📁 Key Experiments
 
-This repo contains multiple experiments under a shared vision:
+### ✅ Experiment 1: UBI Policy Formation
+- Agents (e.g., low-income, tech worker, retired) evaluate UBI
+- Multi-agent deliberation produces policy via critique + revision
+- Single-LLM baseline generated via direct prompt
 
+### 🔄 Experiment 2: Policy Simulation Over Time
+- Simulated society evaluates each policy across 5 steps
+- Multi-agent policy evolves via agent feedback
+- Single-LLM policy remains static
+
+Metrics:
+- Satisfaction scores
+- Fairness (variance)
+- Stability over time
+
+### 📊 Experiment 3: Diversity Metrics
+- **Token Entropy** for lexical richness
+- **Embedding Diversity** for semantic variety
+
+Multi-agent systems produced higher diversity and fairer satisfaction distributions.
+
+### 🔬 Experiment 4: Mechanistic Interpretability Design
+
+We design upcoming experiments to inspect *how* and *why* group deliberation works:
+
+- Trace activation pathways via TransformerLens
+- Identify "value circuits" (fairness, meritocracy)
+- Measure error detection in solo vs. multi-agent critique
+
+Planned Tasks:
+- **Value steering**: amplify alignment dimensions
+- **Error correction**: insert flaws, trace response
+- **Consensus tracing**: identify convergence patterns
+
+---
+
+## 💡 Why It Matters
+
+- Aligns LLMs with multi-dimensional social values
+- Enables simulation of dissent, negotiation, and compromise
+- Builds bridges between interpretability and democratic AI
+
+This is a sandbox for AI alignment, governance research, and interactive simulations of social reasoning.
+
+---
+
+## 📌 Structure
 ```
 sim-society/
 ├── experiments/
-│   ├── hybrid_llm_feedback/       # Static agents scoring policies via LLM
-│   │   ├── feedback_loop.py
-│   │   ├── output/
-│   │   └── README.md
-│   ├── marl_voting/              # Agents learn and vote on policy proposals
-│   │   ├── marl_voting.py
-│   │   ├── results/
-│   │   └── README.md
-├── agents/                       # Shared agent logic and abstractions
-├── README.md                     # (this file)
-└── requirements.txt
+│   ├── hybrid_llm_feedback/
+│   ├── marl_voting/
+│   ├── policy_cases/
+├── habermas_machine/      # Agent + mediator architecture
+├── analysis/              # Metrics, plots, logs
+├── README.md
 ```
 
-Each folder under `experiments/` is a unique simulation approach, from prompt-based policy rating to agent-based learning.
+---
+
+## 🧠 Built With
+- Python + PyTorch
+- DeepSeek-R1 / LLaMA (via Ollama)
+- UCI Adult dataset
+- TransformerLens (planned)
+- Matplotlib, CSV logs
 
 ---
 
-## 🤖 Philosophical Foundations
+## ✨ Credits
+Designed and developed by **Navid Mirnouri**
 
-This project is inspired by the intersection of:
-- **Political philosophy** (Rawls, utilitarianism, pluralism)
-- **Multi-agent systems** (AI agents with different interests)
-- **AI alignment** (learning goals that reflect human preferences)
-
-By treating social policies as dynamic, learnable entities, we turn governance into an **adaptive process** — one that can optimize over time, account for feedback, and adjust to different values.
-
-The simulation is not a final model of justice — it is a **mirror** that shows us what gets lost when we choose one value over another.
+GitHub: [navid72m](https://github.com/navid72m)  
+LinkedIn: [Navid Mirnouri](https://www.linkedin.com/in/navid-mirnouri)
 
 ---
 
-## 📊 Experiments Overview
-
-### 1. `hybrid_llm_feedback/`
-> LLM agents (via Ollama) score and justify policies based on their group’s socioeconomic profile. The system updates policies via gradient ascent to improve overall satisfaction.
-
-### 2. `marl_voting/`
-> Each agent learns its own internal values. They vote on proposed policies. The winning policy is evaluated and agents update their preferences based on reward. A blend of democracy and reinforcement learning.
-
----
-
-## 🔍 Why This Matters
-
-- It tests how **conflicting values** interact over time
-- It builds systems that can **listen to minority feedback**
-- It lets us observe **moral and political failure modes** before real-world deployment
-
-And perhaps most importantly:
-> It reminds us that justice is not fixed — it's a process of continuous debate, learning, and reflection.
-
----
-
-## 🧠 Author
-
-Built by **Navid Mirnouri**  
-[GitHub](https://github.com/navid72m) ・ [LinkedIn](https://www.linkedin.com/in/navid-mirnouri)
-
-If you're passionate about simulation, ethics, or alignment research, feel free to reach out or contribute.
-
----
-
-## 📜 License
-
-MIT License — use it, build on it, debate it.
-
----
-
-## 🧭 Tags
-
-`#AI` `#Simulation` `#Justice` `#Governance` `#PoliticalPhilosophy` `#LLM` `#MultiAgentSystems` `#EthicsInAI` `#ReinforcementLearning`
+## 🔖 Tags
+`#DeliberativeAI` `#AIAlignment` `#MultiAgentSystems` `#PolicySimulation` `#MechanisticInterpretability` `#Fairness` `#Ethics`
 
