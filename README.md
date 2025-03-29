@@ -5,6 +5,7 @@ This repository contains a research prototype exploring **deliberative AI** for 
 ---
 
 ## 📜 Overview
+
 Inspired by political philosophy (Habermas, Rawls) and modern interpretability methods, we build a system where agents with diverse values:
 
 - Deliberate over social policy
@@ -18,11 +19,13 @@ The system compares **multi-agent policy generation** with **single-LLM generati
 ## 📁 Key Experiments
 
 ### ✅ Experiment 1: UBI Policy Formation
+
 - Agents (e.g., low-income, tech worker, retired) evaluate UBI
 - Multi-agent deliberation produces policy via critique + revision
 - Single-LLM baseline generated via direct prompt
 
 ### 🔄 Experiment 2: Policy Simulation Over Time
+
 - Simulated society evaluates each policy across 5 steps
 - Multi-agent policy evolves via agent feedback
 - Single-LLM policy remains static
@@ -32,7 +35,43 @@ Metrics:
 - Fairness (variance)
 - Stability over time
 
+#### 📈 Comparative Analysis of Satisfaction Dynamics
+
+**Multi-Agent Policy:**
+- No agent remains persistently dissatisfied across all steps.
+- Satisfaction fluctuates but distributes more evenly.
+- Trade-offs emerge as different groups are prioritized across steps.
+- Suggests responsiveness to group critiques and value balancing.
+
+**Single-LLM Policy:**
+- Sharp satisfaction oscillations (e.g., tech_worker).
+- Some groups (e.g., low_income) show persistent dissatisfaction.
+- Lacks evidence of compromise or adaptive behavior.
+
+#### Summary Table
+
+| Metric                         | Multi-Agent           | Single-LLM           |
+|-------------------------------|------------------------|----------------------|
+| **Responsiveness**            | High                   | Low                  |
+| **Fairness (Std Dev)**        | ✅ Lower                | ❌ Higher             |
+| **Stability over Time**       | Moderate               | Oscillating          |
+| **Compromise Indicators**     | Present                | Absent               |
+| **Persistent Dissatisfaction**| None                   | Present              |
+
+**Conclusion**: Multi-agent deliberation supports pluralism and feedback-driven evolution. Single-LLM output appears static and insufficiently adaptive to societal needs.
+
+- Simulated society evaluates each policy across 5 steps
+- Multi-agent policy evolves via agent feedback
+- Single-LLM policy remains static
+
+Metrics:
+
+- Satisfaction scores
+- Fairness (variance)
+- Stability over time
+
 ### 📊 Experiment 3: Diversity Metrics
+
 - **Token Entropy** for lexical richness
 - **Embedding Diversity** for semantic variety
 
@@ -47,6 +86,7 @@ We design upcoming experiments to inspect *how* and *why* group deliberation wor
 - Measure error detection in solo vs. multi-agent critique
 
 Planned Tasks:
+
 - **Value steering**: amplify alignment dimensions
 - **Error correction**: insert flaws, trace response
 - **Consensus tracing**: identify convergence patterns
@@ -64,6 +104,7 @@ This is a sandbox for AI alignment, governance research, and interactive simulat
 ---
 
 ## 📌 Structure
+
 ```
 sim-society/
 ├── experiments/
@@ -78,6 +119,7 @@ sim-society/
 ---
 
 ## 🧠 Built With
+
 - Python + PyTorch
 - DeepSeek-R1 / LLaMA (via Ollama)
 - UCI Adult dataset
@@ -87,13 +129,15 @@ sim-society/
 ---
 
 ## ✨ Credits
+
 Designed and developed by **Navid Mirnouri**
 
-GitHub: [navid72m](https://github.com/navid72m)  
+GitHub: [navid72m](https://github.com/navid72m)\
 LinkedIn: [Navid Mirnouri](https://www.linkedin.com/in/navid-mirnouri)
 
 ---
 
 ## 🔖 Tags
+
 `#DeliberativeAI` `#AIAlignment` `#MultiAgentSystems` `#PolicySimulation` `#MechanisticInterpretability` `#Fairness` `#Ethics`
 
